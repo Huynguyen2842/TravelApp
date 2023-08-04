@@ -16,7 +16,7 @@ struct Sight: Identifiable {
     var besttime: String
     var country: String
     var description: String
-
+    var isFavorited: Bool
 
     var imageName: String
     var image: Image {

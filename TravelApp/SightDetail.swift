@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct SightDetail: View {
-    let sight: Sight
+    @EnvironmentObject var modelData: ModelData
+    var sight: Sight
+    var SightIndex: Int {
+        modelData.sights.firstIndex(where: {$0.id == sight.id })!
+    }
     var body: some View {
-        VStack {
+        ScrollView {
             MapView()
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.top)
@@ -18,10 +22,10 @@ struct SightDetail: View {
                 .offset(y: -180)
                 .padding(.bottom, -180)
             VStack(alignment: .leading) {
-                HStack{
+                HStack {
                     Text(sight.name)
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.sights[SightIndex].isFavorited)
                 }
                             .font(.title)
                         HStack {
@@ -38,7 +42,7 @@ struct SightDetail: View {
                         }
                 
                         Divider()
-                        Text("About")
+                        Text("About \(sight.name)")
                     .font(.title2)
                 Text(sight.description)
                     }
@@ -50,7 +54,9 @@ struct SightDetail: View {
 }
 
 struct SightDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
     static var previews: some View {
-        SightDetail(sight: sights[0])
+        SightDetail(sight: modelData.sights[0])
+                    .environmentObject(modelData)
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @StateObject private var modelData = ModelData()
     @State var isWelcomeActive : Bool = true
     var body: some View {
         ZStack{
@@ -15,6 +16,8 @@ struct WelcomeView: View {
                 GreetingView(active: $isWelcomeActive)
             } else {
                 SightList()
+                    .environmentObject(modelData)
+
             }
         }
     }
@@ -23,5 +26,6 @@ struct WelcomeView: View {
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView()
+            .environmentObject(ModelData())
     }
 }

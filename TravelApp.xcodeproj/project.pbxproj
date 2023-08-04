@@ -20,6 +20,7 @@
 		41E8F2F52A7CFE1E0077ED22 /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8F2F42A7CFE1E0077ED22 /* Sight.swift */; };
 		41E8F2F82A7CFFFE0077ED22 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8F2F72A7CFFFE0077ED22 /* ModelData.swift */; };
 		41E8F2FA2A7D04900077ED22 /* SightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8F2F92A7D04900077ED22 /* SightRow.swift */; };
+		41E8F2FC2A7D5CC10077ED22 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8F2FB2A7D5CC00077ED22 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		41E8F2F42A7CFE1E0077ED22 /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 		41E8F2F72A7CFFFE0077ED22 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		41E8F2F92A7D04900077ED22 /* SightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightRow.swift; sourceTree = "<group>"; };
+		41E8F2FB2A7D5CC00077ED22 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				41E8F2F02A7CF6510077ED22 /* SightDetail.swift */,
 				41E8F2F22A7CF6DE0077ED22 /* MapView.swift */,
 				41E8F2F92A7D04900077ED22 /* SightRow.swift */,
+				41E8F2FB2A7D5CC00077ED22 /* FavoriteButton.swift */,
 				41E8F2F62A7CFE230077ED22 /* Model  */,
 				41E8F2DD2A7CCDF60077ED22 /* Assets.xcassets */,
 				41E8F2DF2A7CCDF60077ED22 /* Preview Content */,
@@ -175,6 +178,7 @@
 				41E8F2FA2A7D04900077ED22 /* SightRow.swift in Sources */,
 				41E8F2F52A7CFE1E0077ED22 /* Sight.swift in Sources */,
 				41E8F2ED2A7CE54E0077ED22 /* SightList.swift in Sources */,
+				41E8F2FC2A7D5CC10077ED22 /* FavoriteButton.swift in Sources */,
 				41E8F2F32A7CF6DE0077ED22 /* MapView.swift in Sources */,
 				41E8F2DC2A7CCDF10077ED22 /* ContentView.swift in Sources */,
 				41E8F2EB2A7CCF000077ED22 /* GreetingView.swift in Sources */,

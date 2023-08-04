@@ -15,17 +15,25 @@ struct SightRow: View {
                 .resizable()
                 .frame(width: 50,height: 50)
             Text(sight.name)
+            
+            Spacer()
+            
+            if sight.isFavorited{
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
+                
         }
     }
 }
 
 struct SightRow_Previews: PreviewProvider {
+    static var sights = ModelData().sights
     static var previews: some View {
         Group {
-            SightRow(sight: sights[0])
+                    SightRow(sight: sights[0])
+                    SightRow(sight: sights[1])
+                }
                 .previewLayout(.fixed(width: 300, height: 70))
-            SightRow(sight: sights[1])
-                .previewLayout(.fixed(width: 300, height: 70))
-        }
     }
 }
