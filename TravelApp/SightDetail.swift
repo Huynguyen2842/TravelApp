@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SightDetail: View {
+    let sight: Sight
     var body: some View {
         VStack {
             MapView()
@@ -17,20 +18,29 @@ struct SightDetail: View {
                 .offset(y: -180)
                 .padding(.bottom, -180)
             VStack(alignment: .leading) {
-                        Text("Turtle Rock")
+                HStack{
+                    Text(sight.name)
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                }
                             .font(.title)
                         HStack {
-                            Text("Joshua Tree National Park")
-                                .font(.subheadline)
+                            HStack{
+                                Text("Best Time:")
+                                    .fontWeight(.bold)
+                                    .font(.subheadline)
+                                Text(sight.besttime)
+                                    .font(.subheadline)
+                            }
                             Spacer()
-                            Text("California")
+                            Text(sight.country)
                                 .font(.subheadline)
                         }
                 
                         Divider()
-                        Text("About ")
+                        Text("About")
                     .font(.title2)
-                    Text("Description")
+                Text(sight.description)
                     }
             .padding()
             
@@ -41,6 +51,6 @@ struct SightDetail: View {
 
 struct SightDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SightDetail()
+        SightDetail(sight: sights[0])
     }
 }

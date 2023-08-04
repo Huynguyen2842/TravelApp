@@ -9,12 +9,22 @@ import SwiftUI
 
 struct SightList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(sights) {
+                sight in
+                NavigationLink {
+                    SightDetail(sight: sight)
+                } label: {
+                    SightRow(sight: sight)
+                }
+            }
+            .navigationTitle("Sights")
+        }
     }
-}
-
-struct SightList_Previews: PreviewProvider {
-    static var previews: some View {
-        SightList()
+    
+    struct SightList_Previews: PreviewProvider {
+        static var previews: some View {
+            SightList()
+        }
     }
 }
