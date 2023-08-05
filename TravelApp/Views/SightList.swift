@@ -33,7 +33,7 @@ struct SightList: View {
                 }
             }
             .searchable(text: $searchTerm, prompt: "Search Sights")
-            .navigationTitle("Sights")
+            .navigationTitle("Best Sights to ✈️")
             .toolbar{
                 ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing){
                     Button(action: {isDark.toggle()}, label: {isDark ? Label("Dark", systemImage: "sun.max.fill")
