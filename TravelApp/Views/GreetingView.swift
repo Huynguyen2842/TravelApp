@@ -21,13 +21,13 @@ struct GreetingView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 300)
                 Text("Welcome")
-                    .font(.system(size: 60))
+                    .font(Font.custom("Didot", size: 70))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 Text("""
-                     Go, Find, and Explore the greatest sights of the world !!!
+                     Let's discover the greatest sights of the world !!!
                      """)
-                .font(.title3)
+                    .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
@@ -49,12 +49,12 @@ struct GreetingView: View {
                     active = false;
                 } label: {
                     Capsule()
-                        .fill(.white.opacity(0.6))
+                        .fill(.black.opacity(0.5))
                         .frame(height: 80)
                         .padding(.horizontal, 40)
                         .overlay(
-                        Text("Let's Started ✈️")
-                            .foregroundColor(.black)
+                        Text("Get Started")
+                            .foregroundColor(.white)
                             .fontWeight(.bold)
                             .font(.system(.title2))
                         )

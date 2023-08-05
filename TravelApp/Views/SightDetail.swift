@@ -17,10 +17,12 @@ struct SightDetail: View {
         ScrollView {
             MapView()
                 .frame(height: 300)
-                .edgesIgnoringSafeArea(.top)
-            CircleImage()
-                .offset(y: -180)
-                .padding(.bottom, -180)
+                .edgesIgnoringSafeArea(.all)
+            
+            CircleImage(image: sight.image)
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
             VStack(alignment: .leading) {
                 HStack {
                     Text(sight.name)
@@ -56,7 +58,7 @@ struct SightDetail: View {
 struct SightDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
     static var previews: some View {
-        SightDetail(sight: modelData.sights[0])
+        SightDetail(sight: modelData.sights[2])
                     .environmentObject(modelData)
     }
 }
