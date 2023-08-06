@@ -4,6 +4,17 @@
 //
 //  Created by Nguyen Giang Huy on 04/08/2023.
 //
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2023B
+ Assessment: Assignment 1
+ Author: Nguyen Giang Huy
+ ID: Your student id (e.g. 1234567)
+ Created  date: 04/08/2023
+ Last modified: 06/08/2023
+ Acknowledgement: ContactList app on github, as well as some other website on the internet in order to get the information for each sight
+*/
 
 import SwiftUI
 
@@ -21,14 +32,14 @@ struct GreetingView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 300)
                 Text("Welcome")
-                    .font(Font.custom("Didot", size: 70))
+                    .font(Font.custom("Didot", size: 60))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 Text("""
-                     Let's discover the greatest sights of the world !!!
+                     Let's Explore the world 🌍 with Travel App 🏆
                      """)
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.title2)
+                    .fontWeight(.heavy)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.all)
@@ -39,7 +50,7 @@ struct GreetingView: View {
                     Image("AppLogo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 150)
+                        .frame(width: 200)
                 }
                 
                 Spacer()
@@ -57,6 +68,14 @@ struct GreetingView: View {
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .font(.system(.title2))
+                        )
+                        .overlay(
+                            Image(systemName: "arrow.right.circle.fill")
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .foregroundColor(.white)
+                                .frame(width: 35, height: 35)
+                                .offset(x: 100)
                         )
                 
                 }
